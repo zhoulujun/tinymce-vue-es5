@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    padding: 10px;
+    overflow: auto;
+    font: 400 14px/1.5 "Microsoft YaHei", "SF Pro Text", "Helvetica Neue", "Helvetica", Tahoma, SimHei, sans-serif;
+    color: #666;
+}

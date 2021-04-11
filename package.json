@@ -1,0 +1,28 @@
+{
+  "name": "tinymce-vue-es5",
+  "version": "1.0.0",
+  "description": "tinyMCE 富文本编辑器，es5导入版本，非远程加载，可以加载多个。用@tinymce/tinymce-vue 发现多个编辑器共存，不好用。自己看官方问，封装了一个",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhoulujun/tinymce-vue-es5.git"
+  },
+  "keywords": [
+    "tinyMCE",
+    "Vue",
+    "es5",
+    "ts",
+    "typescript",
+    "webpack",
+    "富文本编辑器"
+  ],
+  "author": "zhoulujun.cn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhoulujun/tinymce-vue-es5/issues"
+  },
+  "homepage": "https://github.com/zhoulujun/tinymce-vue-es5#readme"
+}
