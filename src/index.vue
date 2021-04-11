@@ -113,8 +113,8 @@ export default {
           this.hasInit = true;
         },
         language: 'zh_CN',
-        language_url: `https://github.com/zhoulujun/tinymce-vue-es5/src/langs/zh_CN.js`,
-        content_css: `https://github.com/zhoulujun/tinymce-vue-es5/src/css/tinymce-vue.css`,
+        language_url: `https://cdn.zhoulujun.cn/src/js/tinymce/zh_CN.js`,
+        content_css: `https://www.zhoulujun.cn/statics/css/frontend/reset.css`,
         paste_data_images: true,
         toolbar_mode: 'sliding',
         font_formats: '微软雅黑=Microsoft YaHei,Helvetica Neue,PingFang SC,sans-serif;苹果苹方=PingFang SC,Microsoft YaHei,sans-serif;宋体=simsun,serif;黑体=SimHei,STHeiti;仿宋=FangSong,STFangsong;楷体=KaiTi,STKaiti;隶书=LiSu;幼圆=YouYuan;Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats',
