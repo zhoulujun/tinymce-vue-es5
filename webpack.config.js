@@ -22,7 +22,7 @@ const config = {
   },
   output: { // 配置输出选项
     path: path.resolve(__dirname, 'dist'), // 输出路径为，当前路径下
-    filename: '[name].[hash:5].js'// 输出后的文件名称
+    filename: '[name].js'// 输出后的文件名称
   },
   resolve: {
     extensions: ['.js', '.json', '.vue'] // 减少文件查找

@@ -1,6 +1,6 @@
 {
   "name": "tinymce-vue-es5",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "tinyMCE 富文本编辑器，es5导入版本，非远程加载，可以加载多个。用@tinymce/tinymce-vue 发现多个编辑器共存，不好用。自己看官方问，封装了一个",
   "main": "./dist/index.js",
   "scripts": {
