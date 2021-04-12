@@ -17,7 +17,7 @@
  @updateTime 2021/4/12 17:25
  @description
  */
-import RichTextEditor from './components/RichTextEditor/RichTextEditor'
+import RichTextEditor from './components/RichTextEditor/index'
 export default {
     name: 'App',
     components: {
