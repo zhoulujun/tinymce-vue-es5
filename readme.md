@@ -4,6 +4,7 @@
 + [tinyMCE 官方：https://www.tiny.cloud/blog/under-pressure-powerpaste/](https://www.tiny.cloud/blog/under-pressure-powerpaste/)
 + [TinyMCE vs CKEditor: battle of titans! (of WYSIWYG editing):TinyMCE vs CKEditor: battle of titans! (of WYSIWYG editing)](https://www.turnkeylinux.org/blog/tinymce-vs-ckeditor)
 + [市面上其它的一些富文本分学习](https://panjiachen.github.io/vue-element-admin-site/zh/feature/component/rich-editor.html)
+
 个人感觉tinyMCE功能最强，之前一直使用[UEditor](https://fex.baidu.com/ueditor/)，支持国产。但是百度最近对之前的开源项目很多都停摆了。
 ### vue本地化引入 tinyMCE
 [tinyMCE: https://github.com/tinymce/tinymce](https://github.com/tinymce/tinymce)
