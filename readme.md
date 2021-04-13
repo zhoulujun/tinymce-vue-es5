@@ -11,7 +11,11 @@
 官方提供的 [tinymce-vue:https://github.com/tinymce/tinymce-vue](https://github.com/tinymce/tinymce-vue)
 
 存在远程加载资源 与本地多个编辑器问题，于是自己动手弄一个es5的。图片不直接转base64 插入文本
+>上传图片，转为base64 保存，不上传到服务器 具体参看： [复制粘贴截图并转化base64格式保存至数据库](https://www.cnblogs.com/yan0720/p/10997402.html)
+
+
 [demo地址：http://demo.zhoulujun.cn/tinymce-vue-es5/](http://demo.zhoulujun.cn/tinymce-vue-es5/)
+
 其实也没有啥技术含量， 具体参看官网：[https://www.tiny.cloud/docs/advanced/usage-with-module-loaders/](https://www.tiny.cloud/docs/advanced/usage-with-module-loaders/)
 ## 用法：
 导入组件
@@ -89,6 +93,4 @@ export default {
 ```
 
 ### 图片上传
-上传图片，转为base64 保存，不上传到服务器，具体参看：
- 复制粘贴截图并转化base64格式保存至数据库(url:https://www.cnblogs.com/yan0720/p/10997402.html——Ckeditor 4)
 
