@@ -58,11 +58,11 @@
                 hasInit: false
             }
         },
-        watch: {
-          value (val) {
-            this.$nextTick(() => tinymce.get(this.domId).setContent(val || ''))
-          }
-        },
+        // watch: {
+        //   value (val) {
+        //     this.$nextTick(() => tinymce.get(this.domId).setContent(val || ''))
+        //   }
+        // },
         mounted () {
             this.$nextTick(() => {
                 this.initTinyMCE()

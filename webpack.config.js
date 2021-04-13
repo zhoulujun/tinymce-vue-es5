@@ -9,7 +9,6 @@ const os = require('os')
 const HappyPack = require('happypack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const devMode = process.env.NODE_ENV === 'development'
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
 console.log('devMode___________', devMode)
@@ -22,7 +21,11 @@ const config = {
   },
   output: { // 配置输出选项
     path: path.resolve(__dirname, 'dist'), // 输出路径为，当前路径下
-    filename: '[name].js'// 输出后的文件名称
+    filename: '[name].js',// 输出后的文件名称
+    libraryTarget: 'umd',  // 这个选项会尝试把库暴露给前使用的模块定义系统，这使其和CommonJS、AMD兼容或者暴露为全局变量
+    libraryExport: 'default',
+    library: 'RichTextEditor',
+    umdNamedDefine: true,
   },
   resolve: {
     extensions: ['.js', '.json', '.vue'] // 减少文件查找
@@ -38,13 +41,12 @@ const config = {
         test: /\.css$/,
         use: [// 使用use可配置多个loader进行处理。顺序由最后一个至第一个。此处匹配到css文件后，先由postcss-loader处理，css-loader处理后再交由style-loader处理
           'vue-style-loader', // 将样式通过style标签的方式加入到dom中
-          devMode ? {
+          {
             loader: 'style-loader',
             options: {
               // singleton:true //处理为单个style标签
             }
-          }
-            : MiniCssExtractPlugin.loader,
+          },
           { // css-loader 解释(interpret) @import 和 url()
             loader: 'css-loader',
             options: {
@@ -75,13 +77,12 @@ const config = {
         test: /\.(scss)$/,
         use: [// 使用use可配置多个loader进行处理。顺序由最后一个至第一个。此处匹配到css文件后，先由css-loader进行处理，css-loader处理后再交由vue-style-loader处理
           'vue-style-loader', // 将样式通过style标签的方式加入到dom中
-          devMode ? {
+          {
             loader: 'style-loader'
             /* options: {
                    singleton:true //处理为单个style标签
                } */
-          }
-            : MiniCssExtractPlugin.loader,
+          },
           { // css-loader 解释(interpret) @import 和 url()
             loader: 'css-loader',
             options: {
@@ -199,12 +200,12 @@ const config = {
 
     new VueLoaderPlugin(),
 
-    new MiniCssExtractPlugin({
-      filename: '[name].[hash:5].css',
-      chunkFilename: '[id].[hash].css',
-      disable: false, // 是否禁用此插件
-      allChunks: true
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: '[name].[hash:5].css',
+    //   chunkFilename: '[id].[hash].css',
+    //   disable: false, // 是否禁用此插件
+    //   allChunks: true
+    // }),
 
     new HtmlWebpackPlugin({
       template: './src/index.html', // 本地模板文件的位置，支持加载器(如handlebars、ejs、undersore、html等)，如比如 handlebars!src/index.hbs；

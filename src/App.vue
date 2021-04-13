@@ -2,11 +2,16 @@
   <div>
     <h3>编辑器</h3>
     <RichTextEditor v-model="html" />
-    <h3>编辑器复制</h3>
-    <RichTextEditor v-model="html" />
     <hr>
-    <h3>结果展示</h3>
+    <h4>编辑器结果展示</h4>
     <div v-html="html" />
+    <hr>
+    <hr>
+    <h3>编辑器2</h3>
+    <RichTextEditor v-model="html2" />
+    <hr>
+    <h4>编辑器结果展示2</h4>
+    <div v-html="html2" />
   </div>
 </template>
 
@@ -25,7 +30,8 @@ export default {
     },
     data () {
         return {
-          html: '<div><a href="https://www.zhoulujun.cn/">zhoulujun.cn</a></div>'
+          html: '<div><a href="https://www.zhoulujun.cn/">zhoulujun.cn</a></div>',
+          html2: '<div><a href="https://www.zhoulujun.cn/">zhoulujun.cn</a></div>'
         }
     },
     methods: {}

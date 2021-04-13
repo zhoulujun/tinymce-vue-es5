@@ -5,6 +5,7 @@
  * @update 2021/4/12 by andyChou
  */
 import RichTextEditor from './components/RichTextEditor/index'
+
 const components = [
   RichTextEditor
 ]
