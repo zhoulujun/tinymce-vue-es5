@@ -18,6 +18,10 @@
 [demo地址：http://demo.zhoulujun.cn/tinymce-vue-es5/](http://demo.zhoulujun.cn/tinymce-vue-es5/)
 
 其实也没有啥技术含量， 具体参看官网：[https://www.tiny.cloud/docs/advanced/usage-with-module-loaders/](https://www.tiny.cloud/docs/advanced/usage-with-module-loaders/)
+###
+开箱即用，**不需要其他的引入与配置**，且可以合并自定义配置。
+
+看了下npm的其它包，会依赖远程资源，或者需要其他的安装包等。此包直接使用就可
 ## 用法：
 导入组件
 ```javascript
