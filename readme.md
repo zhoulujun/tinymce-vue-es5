@@ -22,13 +22,22 @@
 开箱即用，**不需要其他的引入与配置**，且可以合并自定义配置。
 
 看了下npm的其它包，会依赖远程资源，或者需要其他的安装包等。此包直接使用就可
-## 用法：
-导入组件
+
+组件参考 element-ui UMD 打包导出
 ```javascript
-import RichEditor from 'tinyMCE-vue-es5';
+export default {
+  install,
+  RichTextEditor
+}
+```
+## 用法：
+vue 中导入组件并使用
+### JavaScript
+```javascript
+import { RichTextEditor } from 'tinymce-vue-es5'
 export default {
  components: {
-  RichTextEditor
+   RichTextEditor
  },
  data () {
   return {
@@ -45,9 +54,9 @@ export default {
  }
 }
 ```
-使用
+### vue模板
 ```vue
-<RichEditor 
+<RichTextEditor
    v-model="RichTextHtmlContent" 
    :options='options'
    @FullscreenStateChanged="changefullscreenState"
@@ -55,6 +64,7 @@ export default {
 ```
 具体参案例：
 
+[demo地址：http://demo.zhoulujun.cn/tinymce-vue-es5/](http://demo.zhoulujun.cn/tinymce-vue-es5/)
 
 ```html
 <template>
