@@ -14,6 +14,9 @@
 存在远程加载资源 与本地多个编辑器问题，于是自己动手弄一个es5的。图片不直接转base64 插入文本
 >上传图片，转为base64 保存，不上传到服务器 具体参看： [复制粘贴截图并转化base64格式保存至数据库](https://www.cnblogs.com/yan0720/p/10997402.html)
 
+如果需要ajax 上传到图片复位器，请查看[https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url](https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
+
+图片服务器你，个人觉得这个还挺好的：[https://github.com/Chevereto/Chevereto-Free](https://github.com/Chevereto/Chevereto-Free)
 
 [demo地址：http://demo.zhoulujun.cn/tinymce-vue-es5/](http://demo.zhoulujun.cn/tinymce-vue-es5/)
 
@@ -41,15 +44,40 @@ export default {
  },
  data () {
   return {
-   RichTextHtmlContent: '<div><a href="https://www.zhoulujun.cn/">zhoulujun.cn</a></div>'
+   richTextHtmlContent: '<div><a href="https://www.zhoulujun.cn/">zhoulujun.cn</a></div>', 
+   // your config will merge into RichTextEditor
    options:{
-     // your config will merge into RichTextEditor
+     // 语言配置
+     language: 'zh_CN',
+     // 语言地址
+     language_url: `https://cdn.zhoulujun.cn/src/js/tinymce/zh_CN.js`,
+     // 编辑器样式
+     content_css: `https://cdn.zhoulujun.cn/src/js/tinymce/tinymce-vue.css`,
+     file_picker_callback: function(callback, value, meta) {
+       // Provide file and text for the link dialog
+       if (meta.filetype == 'file') {
+         callback('mypage.html', {text: 'My text'});
+       }
+
+       // Provide image and alt text for the image dialog
+       if (meta.filetype == 'image') {
+         callback('myimage.jpg', {alt: 'My alt text'});
+       }
+
+       // Provide alternative source and posted for the media dialog
+       if (meta.filetype == 'media') {
+         callback('movie.mp4', {source2: 'alt.ogg', poster: 'image.jpg'});
+       }
+     }
    }
   }
  },
  methods: {
   changefullscreenState(status){
     console.log(status)
+  },
+  change(text){
+    console.log(text)
   }
  }
 }
@@ -57,9 +85,10 @@ export default {
 ### vue模板
 ```vue
 <RichTextEditor
-   v-model="RichTextHtmlContent" 
+   v-model="richTextHtmlContent" 
    :options='options'
    @FullscreenStateChanged="changefullscreenState"
+   @change="change"
 />
 ```
 具体参案例：
@@ -107,5 +136,5 @@ export default {
 
 ```
 
-### 图片上传
+### z
 

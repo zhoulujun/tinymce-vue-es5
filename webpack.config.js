@@ -21,11 +21,11 @@ const config = {
   },
   output: { // 配置输出选项
     path: path.resolve(__dirname, 'dist'), // 输出路径为，当前路径下
-    filename: '[name].js',// 输出后的文件名称
-    libraryTarget: 'umd',  // 这个选项会尝试把库暴露给前使用的模块定义系统，这使其和CommonJS、AMD兼容或者暴露为全局变量
+    filename: '[name].js', // 输出后的文件名称
+    libraryTarget: 'umd', // 这个选项会尝试把库暴露给前使用的模块定义系统，这使其和CommonJS、AMD兼容或者暴露为全局变量
     libraryExport: 'default',
     library: 'RichTextEditor',
-    umdNamedDefine: true,
+    umdNamedDefine: true
   },
   resolve: {
     extensions: ['.js', '.json', '.vue'] // 减少文件查找
@@ -70,7 +70,7 @@ const config = {
                 'android >= 4.0'
               ]
             }
-          }
+          },
         ]
       },
       { // sass文件。vue中会将使用sass写的样式抛出给该rule处理.vue中lang可以设置为sass/scss，只需将两者类型都匹配到sass就行
